@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Ubuntu+Mono&family=Ubuntu:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-image:linear-gradient(RGBA(0,0,0,0.45),RGBA(0,0,0,0.45)), url(temp.jpg) ;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 7vh;
+  width: 100%;
+  color: whitesmoke;
+  background-color: rgb(21, 8, 34);
+}
+.header .logo {
+  display: flex;
+  margin-left: 30px;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  opacity: 0;
+  animation: logoslide 1s ease forwards;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.header .logo:hover{
+  color: #0ef;
+  zoom:1.2;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.header .navbar a {
+  padding: 10px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+  animation: navslide 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.header .navbar a:hover {
+  color: aqua;
+  zoom: 1.2;
+}
+
+
+.container {
+  max-width: 500px;
+  max-height: 400px;
+  margin: 30vh auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  animation: contslide 2s ease forwards;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px solid black;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: green;
+  box-shadow:2px 2px 2px green;
+}
+.result-section {
+  font-size: 25px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 17vh;
+  color: whitesmoke;
+  font-size: 20px;
+  background-color: rgb(21, 8, 34);
+  margin-top: 200px;
+}
+
+.copy {
+  animation: copy 1s ease forwards;
+  opacity: 0;
+}
+
+.links a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: cyan;
+  text-decoration: none;
+  transition: 0.5s ease;
+  margin: 30px 15px 30px 0;
+  opacity: 0;
+  animation: icon 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+.links a:hover {
+  background-color: #0ef;
+  color: black;
+  filter: drop-shadow(0 0 0.75rem cyan);
+}
+
+@keyframes logoslide {
+  0% {
+    transform: translateX(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes navslide {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes contslide {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes icon {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes copy {
+  0% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
